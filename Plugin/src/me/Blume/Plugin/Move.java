@@ -18,7 +18,6 @@ public class Move implements Listener{
 		Player player = pMove.getPlayer();
 		ItemStack item = new ItemStack(Material.ENCHANTED_GOLDEN_APPLE,1);
 		Inventory inv = player.getInventory();
-		
 		a++;
 		if(a%100==0) {
 			player.sendMessage(ChatColor.GREEN+"You got Enchanted Golden Apple!");

@@ -9,6 +9,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class Touch implements Listener{
+	private CustomItems ci = new CustomItems();
 	@EventHandler
 	public void touchEmerald(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
@@ -16,7 +17,8 @@ public class Touch implements Listener{
 		Block block =  event.getClickedBlock();
 		if(action.equals(Action.LEFT_CLICK_BLOCK)) {
 			if(block.getType()==Material.EMERALD_BLOCK) {
-				player.setHealth(player.getHealth()+3);
+				player.setHealth(player.getHealth()+1);
+				ci.diamondsword(player);
 			}
 		}
 		
